@@ -59,8 +59,8 @@
     data: () => ({
        drawer: null,
        items: [
-        { title: 'ToDo', icon: 'mdi-view-dashboard', to:"/" },
-        { title: 'About', icon: 'mdi-help-box', to:"/about" },
+        { title: 'ToDo', icon: 'mdi-format-list-checks', to:"/" }, // change icon
+        { title: 'About', icon: 'mdi-help-box', to:"/about" }, // change icon
         
        ]}),
   }
