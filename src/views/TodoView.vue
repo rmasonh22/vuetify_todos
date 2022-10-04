@@ -4,7 +4,10 @@
   <v-list
   flat
   >
-  <v-list-item>
+  <v-list-item
+    v-for="task in tasks"
+    :key="task.id"
+  >
     <template v-slot:default="{ active,}">
       <v-list-item-action>
         <v-checkbox
@@ -15,7 +18,7 @@
       </v-list-item-action>
 
       <v-list-item-content>
-        <v-list-item-title>Todo</v-list-item-title>
+        <v-list-item-title>{{ task.title}}</v-list-item-title>
       </v-list-item-content>
       </template>
       
@@ -26,6 +29,30 @@
 </template>
 
 <script>
+  export default {
+    name: 'TodoView',
+   /*  components: {
+    }, */
+    data() {
+      return {
+        tasks: [
+          {
+            id: 1,
+            title: 'Wake up'
+          },
+          {
+            id: 2,
+            title: 'turn on the computer'
+          },
+          {
+            id: 3,
+            title: 'Go to meeting'
+          }
+        ]
+      }
+    },
+
+  }
  
     
 </script>
