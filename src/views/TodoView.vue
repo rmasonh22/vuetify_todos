@@ -1,7 +1,27 @@
 <template>
 
-<div class="pa-6">
-  <h1>TODO Build App</h1>
+<div class="home">
+  <v-list
+  flat
+  >
+  <v-list-item>
+    <template v-slot:default="{ active,}">
+      <v-list-item-action>
+        <v-checkbox
+          color="primary"
+          :input-value="active"
+          >
+        </v-checkbox>
+      </v-list-item-action>
+
+      <v-list-item-content>
+        <v-list-item-title>Todo</v-list-item-title>
+      </v-list-item-content>
+      </template>
+      
+  </v-list-item>
+</v-list>
+  
 </div>
 </template>
 
